@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="E家洁BOSS" verbose="1">
+	<!-- 截图监听器 -->
+	<listeners>
+		<listener class-name="webtest.core.listenner.DotTestListener"></listener>
+	</listeners>
+	<!-- 测试数据存放地址 -->
+	<parameter name="mysql_url" value="jdbc:mysql://182.92.65.25:3306/testdata?characterEncoding=UTF-8" />
+	<parameter name="mysql_user" value="root" />
+	<parameter name="mysql_pwd" value="Song129927" />
+	<!-- 测试目标配置 -->
+	<parameter name="index" value="http://loadboss2.1jiajie.com/" />
+	<parameter name="admin_user" value="admin"/>
+	<parameter name="admin_pass" value="Password123"/>
+	<parameter name="user_phone" value="18911704270"/>
+
+	<test name="登录测试 -- 浏览器chrome">
+		<parameter name="DriverName" value="chrome"/>
+		<parameter name="ChromeDriverPath" value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+		<classes>
+			<class name="cases_ejj.LoginTest" />
+		</classes>
+	</test>
+
+	<test name="点击链接测试 -- 浏览器chrome">
+		<parameter name="DriverName" value="chrome"/>
+		<parameter name="ChromeDriverPath" value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+		<classes>
+			<class name="cases_ejj.HomeLinkTest" />
+		</classes>
+	</test>
+
+	<test name="创建家政公司测试 -- 浏览器chrome">
+		<parameter name="DriverName" value="chrome"/>
+		<parameter name="ChromeDriverPath" value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+		<classes>
+			<class name="cases_ejj.jiazhenggongshi.AddNewHomeMaking_Test" />
+		</classes>
+	</test>
+
+	<test name="创建门店测试 -- 浏览器chrome">
+		<parameter name="DriverName" value="chrome"/>
+		<parameter name="ChromeDriverPath" value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+		<classes>
+			<class name="cases_ejj.mendianguanli.AddShopTest" />
+		</classes>
+	</test>
+
+	<test name="创建服务供应商 -- 浏览器chrome">
+		<parameter name="DriverName" value="chrome"/>
+		<parameter name="ChromeDriverPath" value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+		<classes>
+			<class name="cases_ejj.fuwugongyingshang.AddSuplierTest" />
+		</classes>
+	</test>
+
+
+	<test name="新建阿姨测试 -- 浏览器chrome">
+		<parameter name="DriverName" value="chrome"/>
+		<parameter name="ChromeDriverPath" value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+		<classes>
+			<class name="cases_ejj.ayiguanli.AddAuntTest" />
+		</classes>
+	</test>
+
+
+	<test name="人工下单测试 -- 浏览器chrome">
+		<parameter name="DriverName" value="chrome"/>
+		<parameter name="ChromeDriverPath" value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+		<classes>
+			<class name="cases_ejj.dingdan.MakeOrder_Test" />
+		</classes>
+	</test>
+
+	<test name="取消订单测试 -- 浏览器chrome">
+		<parameter name="DriverName" value="chrome"/>
+		<parameter name="ChromeDriverPath" value="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe" />
+		<classes>
+			<class name="cases_ejj.dingdan.lookAllOrder.CancelOrderTest" />
+		</classes>
+	</test>
+</suite>
